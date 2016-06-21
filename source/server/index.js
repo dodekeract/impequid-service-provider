@@ -61,6 +61,10 @@ const schema = new Schema({
 		type: String,
 		required: true
 	},
+	denyUrl: {
+		type: String,
+		required: true
+	},
 	author: {
 		pseudonym: {
 			type: String,
@@ -83,11 +87,12 @@ const Model = mongoose.model('service', schema);
 const service = new Map();
 
 Model.find({}, (error, entries) => {
-	entries.forEach(({name, domain, url, returnUrl, author}) => {
+	entries.forEach(({name, domain, url, returnUrl, denyUrl, author}) => {
 		service.set(domain, {
 			name,
 			url,
 			returnUrl,
+			denyUrl,
 			author
 		});
 	});
