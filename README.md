@@ -32,13 +32,13 @@ It is highly recommended to run Impequid Service Provider behind a reverse proxy
 
 ## Configuration
 
-Currently, you need to modify `config.json` in the `impequid-service-provider` directory:
+Just add a `config.json` in `impequid-service-provider`'s main directory. If you want to use this with docker, you should link `/srv/node/config.json` to your configuration file.
 
 ````json
 {
 	"listen": {
 		"address": "127.0.0.1",
-		"port": 50001
+		"port": 8080
 	},
 	"mongo": {
 		"url": "mongodb://127.0.0.1/impequid-service-provider"
@@ -52,12 +52,4 @@ Currently, you need to modify `config.json` in the `impequid-service-provider` d
 
 ## Exposed API
 
-- `GET /api/v1/basic/:appName` [example](https://services.impequid.com/api/v1/basic/dns.smartfl.at)
-	- returns the app information for app `:appName`
-
-- `GET /api/v1/multi/:appName,:appName,:appName,:appName` [example](https://services.impequid.com/api/v1/multi/dns.smartfl.at)
-	- returns the information for all requested apps
-
-- `GET /api/v1/all` [example](https://services.impequid.com/api/v1/all)
-	- returns the information about all apps
-	- useful mostly to initialize a local cache/mirror
+See [here](/documentation/api.md).

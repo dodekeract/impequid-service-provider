@@ -1,11 +1,13 @@
 {
   "name": "impequid-service-provider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Implements an impequid service provider, which stores information about other impequid apps.",
   "main": "build/main.js",
   "scripts": {
-    "start": "node build/server/",
-    "build": "babel --presets es2015 source/ -d build/",
+    "start": "node build/server",
+    "build": "npm run -s clean && npm run -s transpile",
+    "clean": "rm -rf build",
+    "transpile": "babel --presets es2015 source -d build",
     "watch": "nodemon --watch source/ --exec \"npm run build --silent && npm run start --silent\""
   },
   "repository": {
@@ -22,10 +24,9 @@
   },
   "homepage": "https://github.com/dodekeract/impequid-service-provider#readme",
   "dependencies": {
-    "babel-polyfill": "^6.9.1",
-    "koa": "^1.2.0",
-    "koa-router": "^5.4.0",
-    "mongoose": "^4.5.1"
+    "mongoose": "^4.7.6",
+    "spirit": "^0.4.0",
+    "spirit-router": "^0.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
