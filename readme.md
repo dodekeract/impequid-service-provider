@@ -1,9 +1,9 @@
 # Impequid Service Provider
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-[![Code Climate](https://codeclimate.com/github/dodekeract/impequid-service-provider/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/impequid-service-provider)
+[![Code Climate](https://codeclimate.com/github/impequid/service-provider/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/impequid-service-provider)
 [![NPM Downloads](https://img.shields.io/npm/dm/impequid-service-provider.svg)](https://npmjs.com/package/impequid-service-provider)
-[![NPM Dependencies](https://david-dm.org/dodekeract/impequid-service-provider.svg)](https://david-dm.org/dodekeract/impequid-service-provider)
+[![NPM Dependencies](https://david-dm.org/impequid/service-provider.svg)](https://david-dm.org/impequid/service-provider)
 [![Gitter Chatroom](https://badges.gitter.im/dodekeract/impequid.svg)](https://gitter.im/dodekeract/impequid)
 
 Implements an Impequid service provider, which stores information about Impequid Apps.
