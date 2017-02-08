@@ -13,7 +13,7 @@ import service from './service'
 
 // region alias
 
-const {host, port} = config.listen;
+const {host, port} = config.listen
 
 // endregion
 
@@ -72,7 +72,7 @@ const app = route.define([
 // region start
 
 http.createServer(spirit.node.adapter(app)).listen({host, port}, () => {
-	console.info(`listening on http://${host}:${port}`);
-});
+	console.info(`listening on http://${host}:${port}`)
+})
 
 // endregion
