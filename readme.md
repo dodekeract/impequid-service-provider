@@ -6,7 +6,7 @@
 [![NPM Dependencies](https://david-dm.org/impequid/service-provider.svg)](https://david-dm.org/impequid/service-provider)
 [![Gitter Chatroom](https://badges.gitter.im/dodekeract/impequid.svg)](https://gitter.im/dodekeract/impequid)
 
-Implements an Impequid service provider, which stores information about Impequid Apps.
+Provides information about impequid apps. Useful to prevent scams and exploits.
 
 ## Intended Purpose
 
@@ -37,7 +37,7 @@ Just add a `config.json` in `impequid-service-provider`'s main directory. If you
 ````json
 {
 	"listen": {
-		"address": "127.0.0.1",
+		"host": "127.0.0.1",
 		"port": 8080
 	},
 	"mongo": {
