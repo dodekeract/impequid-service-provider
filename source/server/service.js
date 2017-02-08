@@ -61,16 +61,16 @@ const Model = mongoose.model('service', schema)
 
 const service = new Map()
 
-Model.find({}, (error, entries) => {
-	entries.forEach(({name, domain, url, returnUrl, denyUrl, author}) => {
+Model.find({}, (error, entries) =>
+	entries.forEach(({author, denyUrl, domain, name, returnUrl, url}) =>
 		service.set(domain, {
-			name,
-			url,
-			returnUrl,
+			author,
 			denyUrl,
-			author
+			name,
+			returnUrl,
+			url
 		})
-	})
-})
+	)
+)
 
 export default service
